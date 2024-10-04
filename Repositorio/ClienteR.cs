@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Azure.Core;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using RDLSuperMarket.Model;
 using RDLSuperMarket.ORM;
 using System.Collections.Generic;
@@ -7,118 +9,137 @@ using System.Linq;
 
 namespace RDLSuperMarket.Repositorio
 {
-    public class ClienteR 
+    public class ClienteR
     {
-        private readonly RdlSuperMarketContext _context;
+        private readonly RdlsuperMarketContext _context;
 
-        public ClienteR(RdlSuperMarketContext context)
+        public ClienteR(RdlsuperMarketContext context)
         {
             _context = context;
         }
-
         public void Add(Cliente cliente, IFormFile documentoId)
         {
-            byte[] documentoBytes = null;
+            // Verifica se uma foto foi enviada
+            byte[] DocumentoIdBytes = null;
             if (documentoId != null && documentoId.Length > 0)
             {
                 using (var memoryStream = new MemoryStream())
                 {
                     documentoId.CopyTo(memoryStream);
-                    documentoBytes = memoryStream.ToArray();
+                    DocumentoIdBytes = memoryStream.ToArray();
                 }
             }
 
-            var tbCliente = new TbCliente
+            // Cria uma nova entidade do tipo TbCliente a partir do objeto Funcionario recebido
+            var tbCliente = new TbCliente()
             {
                 Nome = cliente.Nome,
-                Telefone = cliente.Telefone,
-                Endereco = cliente.Endereco,
-                Documentoid = documentoBytes
+                Telefone = cliente.Telefone, 
+                Documentoid = DocumentoIdBytes // Armazena a foto na entidade
             };
 
+            // Adiciona a entidade ao contexto
             _context.TbClientes.Add(tbCliente);
+
+            // Salva as mudanças no banco de dados
             _context.SaveChanges();
+        }
+        public void Delete(int id)
+        {
+            // Busca a entidade existente no banco de dados pelo Id
+            var tbCliente = _context.TbClientes.FirstOrDefault(f => f.Id == id);
+
+            // Verifica se a entidade foi encontrada
+            if (tbCliente != null)
+            {
+                // Remove a entidade do contexto
+                _context.TbClientes.Remove(tbCliente);
+
+                // Salva as mudanças no banco de dados
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Funcionário não encontrado.");
+            }
+        }
+        public List<Cliente> GetAll()
+        {
+            List<Cliente> listFun = new List<Cliente>();
+
+            var listTb = _context.TbClientes.ToList();
+
+            foreach (var item in listTb)
+            {
+                var funcionario = new Cliente
+                {
+                    Id = item.Id,
+                    Nome = item.Nome,
+                    Telefone= item.Telefone,
+                };
+
+                listFun.Add(funcionario);
+            }
+
+            return listFun;
+        }
+
+        public Cliente GetById(int id)
+        {
+            // Busca o funcionário pelo ID no banco de dados
+            var item = _context.TbClientes.FirstOrDefault(f => f.Id == id);
+
+            // Verifica se o funcionário foi encontrado
+            if (item == null)
+            {
+                return null; // Retorna null se não encontrar
+            }
+
+            // Mapeia o objeto encontrado para a classe Funcionario
+            var funcionario = new Cliente
+            {
+                Id = item.Id,
+                Nome = item.Nome,
+                Telefone = item.Telefone,
+                Documentoid = item.Documentoid,
+            };
+
+            return funcionario; // Retorna o funcionário encontrado
         }
 
         public void Update(Cliente cliente, IFormFile documentoId)
         {
-            var tbCliente = _context.TbClientes.FirstOrDefault(c => c.Id == cliente.Id);
-            if (tbCliente != null)
-            {
-                tbCliente.Nome = cliente.Nome;
-                tbCliente.Telefone = cliente.Telefone;
-                tbCliente.Endereco = cliente.Endereco;
+            // Busca a entidade existente no banco de dados pelo Id
+            var TbCliente = _context.TbClientes.FirstOrDefault(f => f.Id == cliente.Id);
 
+            // Verifica se a entidade foi encontrada
+            if (TbCliente != null)
+            {
+                // Atualiza os campos da entidade com os valores do objeto Funcionario recebido
+                TbCliente.Nome = cliente.Nome;
+                TbCliente.Telefone = cliente.Telefone;
+
+                // Verifica se uma nova foto foi enviada
                 if (documentoId != null && documentoId.Length > 0)
                 {
                     using (var memoryStream = new MemoryStream())
                     {
                         documentoId.CopyTo(memoryStream);
-                        tbCliente.Documentoid = memoryStream.ToArray();
+                        TbCliente.Documentoid = memoryStream.ToArray(); // Atualiza a foto na entidade
                     }
                 }
 
-                _context.TbClientes.Update(tbCliente);
+                // Atualiza as informações no contexto
+                _context.TbClientes.Update(TbCliente);
+
+                // Salva as mudanças no banco de dados
                 _context.SaveChanges();
             }
             else
             {
-                throw new Exception("Cliente não encontrado.");
+                throw new Exception("Funcionário não encontrado.");
             }
         }
 
-        public void Delete(int id)
-        {
-            var tbCliente = _context.TbClientes.FirstOrDefault(c => c.Id == id);
-            if (tbCliente != null)
-            {
-                _context.TbClientes.Remove(tbCliente);
-                _context.SaveChanges();
-            }
-            else
-            {
-                throw new Exception("Cliente não encontrado.");
-            }
-        }
-
-        public Cliente GetById(int id)
-        {
-            var item = _context.TbClientes.FirstOrDefault(c => c.Id == id);
-            if (item == null)
-            {
-                return null;
-            }
-
-            return new Cliente
-            {
-                Id = item.Id,
-                Nome = item.Nome,
-                Telefone = item.Telefone,
-                Endereco = item.Endereco,
-                Documentoid = item.Documentoid
-            };
-        }
-
-        public List<Cliente> GetAll()
-        {
-            return _context.TbClientes.Select(item => new Cliente
-            {
-                Id = item.Id,
-                Nome = item.Nome,
-                Telefone = item.Telefone,
-                Endereco = item.Endereco,
-                Documentoid = item.Documentoid
-            }).ToList();
-        }
-
-        internal void Add(Cliente novoCliente)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void Update(Cliente clienteExistente)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

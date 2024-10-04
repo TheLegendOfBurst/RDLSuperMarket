@@ -7,7 +7,7 @@ public partial class TbEndereco
 {
     public int Id { get; set; }
 
-    public string Logadouro { get; set; } = null!;
+    public string Logradouro { get; set; } = null!;
 
     public string Cidade { get; set; } = null!;
 
@@ -15,7 +15,7 @@ public partial class TbEndereco
 
     public int Cep { get; set; }
 
-    public string Pontoreferencia { get; set; } = null!;
+    public string? PontoReferencia { get; set; }
 
     public int Numero { get; set; }
 

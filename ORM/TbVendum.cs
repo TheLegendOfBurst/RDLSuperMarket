@@ -3,9 +3,11 @@ using System.Collections.Generic;
 
 namespace RDLSuperMarket.ORM;
 
-public class TbVenda
+public partial class TbVendum
 {
     public int Id { get; set; }
+
+    public int Quantidade { get; set; }
 
     public byte[]? Notafv { get; set; }
 

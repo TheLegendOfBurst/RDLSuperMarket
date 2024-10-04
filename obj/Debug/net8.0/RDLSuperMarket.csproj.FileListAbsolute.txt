@@ -134,3 +134,4 @@ C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\r
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.pdb
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.genruntimeconfig.cache
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\ref\RDLSuperMarket.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.sourcelink.json

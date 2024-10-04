@@ -11,10 +11,7 @@ public partial class TbProduto
 
     public decimal Preco { get; set; }
 
-    public int Quantidade { get; set; }
+    public byte[]? Notaff { get; set; }
 
-    public byte[]? NotasFiscais { get; set; }
-
-    public virtual ICollection<TbVenda> TbVenda { get; set; } = new List<TbVenda>();
-    public object Notaff { get; internal set; }
+    public virtual ICollection<TbVendum> TbVenda { get; set; } = new List<TbVendum>();
 }

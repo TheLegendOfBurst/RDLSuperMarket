@@ -11,21 +11,15 @@ namespace RDLSuperMarket.Model
 
         public string Nome { get; set; } = null!;
 
-        
-        public string Endereco { get; set; } = null!;
-
         public int Telefone { get; set; }
 
-        public byte[]? Documentoid { get; set; }
-        public object DocumentoId { get; internal set; }
-
+        [JsonIgnore]
+        public byte[]? Documentoid { get; set; } 
+       
         [JsonIgnore] // Ignora a serialização deste campo
-        public string? DocBaseId64 => Documentoid != null ? Convert.ToBase64String(Documentoid) : null;
+        public string? DocumentoidBase64 => Documentoid != null ? Convert.ToBase64String(Documentoid) : null;
 
-        public virtual ICollection<TbEndereco> TbEnderecos { get; set; } = new List<TbEndereco>();
-
-        public virtual ICollection<TbVenda> TbVenda { get; set; } = new List<TbVenda>();
-        public object Email { get; internal set; }
+        public string UrlDocumentoid { get; set; }
     }
 
 }
