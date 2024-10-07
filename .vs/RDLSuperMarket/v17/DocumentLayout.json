@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{096E8C02-0380-4034-B5AA-50F3CFF63C8F}|RDLSuperMarket.csproj|c:\\users\\aluno noite\\downloads\\rdl_supermarket\\rdlsupermarket\\repositorio\\clienter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{096E8C02-0380-4034-B5AA-50F3CFF63C8F}|RDLSuperMarket.csproj|solutionrelative:repositorio\\clienter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{096E8C02-0380-4034-B5AA-50F3CFF63C8F}|RDLSuperMarket.csproj|c:\\users\\aluno noite\\downloads\\rdl_supermarket\\rdlsupermarket\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{096E8C02-0380-4034-B5AA-50F3CFF63C8F}|RDLSuperMarket.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{096E8C02-0380-4034-B5AA-50F3CFF63C8F}|RDLSuperMarket.csproj|c:\\users\\aluno noite\\downloads\\rdl_supermarket\\rdlsupermarket\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{096E8C02-0380-4034-B5AA-50F3CFF63C8F}|RDLSuperMarket.csproj|solutionrelative:controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,27 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ClienteR.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\Repositorio\\ClienteR.cs",
-              "RelativeDocumentMoniker": "Repositorio\\ClienteR.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\Repositorio\\ClienteR.cs",
-              "RelativeToolTip": "Repositorio\\ClienteR.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAcwIQAAAA0AAAA",
+              "Title": "ProdutosController.cs",
+              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\Controllers\\ProdutosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "Controllers\\ProdutosController.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAmwIQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T18:55:22.271Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\Aluno Noite\\Downloads\\RDL_SuperMarket\\RDLSuperMarket\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "Controllers\\ClienteController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T18:55:03.756Z",
+              "WhenOpened": "2024-10-07T20:42:07.755Z",
               "EditorCaption": ""
             }
           ]

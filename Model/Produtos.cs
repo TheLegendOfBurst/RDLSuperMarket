@@ -1,4 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿
+
+using System.Text.Json.Serialization;
 
 namespace RDLSuperMarket.Model
 {
@@ -6,18 +8,14 @@ namespace RDLSuperMarket.Model
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public double Preco { get; set; }
-        public double[]? NotasFiscais { get; set; }
+        public decimal Preco { get; set; }
 
-        [JsonIgnore]
-        public string? NotasFiscaisBase64 => NotasFiscais != null ? Convert.ToBase64String(ConvertNotasFiscaisToBytes(NotasFiscais)) : null;
+        [JsonIgnore] // Ignora a serialização deste campo
+        public byte[]? Notaff { get; set; }
 
-        public string UrlFoto { get; set; }
+        [JsonIgnore] // Ignora a serialização deste campo
+        public string? FotoBase64 => Notaff != null ? Convert.ToBase64String(Notaff) : null;
 
-        private byte[] ConvertNotasFiscaisToBytes(double[] notas)
-        {
-            var notasStrings = string.Join(",", notas);
-            return System.Text.Encoding.UTF8.GetBytes(notasStrings);
-        }
+        public string UrlNotaff { get; set; } // Certifique-se de que esta propriedade esteja visível
     }
 }

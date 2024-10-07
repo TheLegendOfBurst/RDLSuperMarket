@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 
 namespace RDLSuperMarket.Model
 {
-    public class Venda
+    public class Vendum
     {
         public int Id { get; set; }
 

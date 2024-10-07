@@ -4,7 +4,6 @@ using RDLSuperMarket.Model;
 using RDLSuperMarket.Repositorio;
 using RDLSuperMarket.ORM;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -14,12 +13,10 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<RdlsuperMarketContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
-
+// Registre os repositórios
 builder.Services.AddScoped<ClienteR>();
-
-
-
+builder.Services.AddScoped<ProdutosR>(); // Adicione esta linha
+builder.Services.AddScoped<EnderecoR>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -33,10 +30,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-// Removido o middleware de autenticação e autorização
-// app.UseAuthentication();
-// app.UseAuthorization();
 
 app.MapControllers();
 

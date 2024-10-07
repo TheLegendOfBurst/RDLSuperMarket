@@ -5,6 +5,7 @@ C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\R
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.csproj.CoreCompileInputs.cache
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.sourcelink.json
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\appsettings.json
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\RDLSuperMarket.exe
@@ -134,4 +135,3 @@ C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\r
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.pdb
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.genruntimeconfig.cache
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\ref\RDLSuperMarket.dll
-C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.sourcelink.json
