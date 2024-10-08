@@ -7,22 +7,24 @@ namespace RDLSuperMarket.Model
     {
         public int Id { get; set; }
 
-        public byte[]? Notafv { get; set; }
+        public int Quantidade { get; set; }
 
         public decimal Valor { get; set; }
 
-        [JsonIgnore]
-        public int FkCliente { get; set; }
+        public int Fkcliente { get; set; }
 
-        [JsonIgnore]
-        public int FkProduto { get; set; }
+        public int Fkproduto { get; set; }
 
-        
         public virtual TbCliente FkClienteNavigation { get; set; } = null!;
+
         public virtual TbProduto FkProdutoNavigation { get; set; } = null!;
 
-        public DateTime DataVenda { get; set; }
+        [JsonIgnore] // Ignora a serialização deste campo
+        public byte[]? Notafv { get; set; }
 
-        public string Descricao { get; set; }
+        [JsonIgnore] // Ignora a serialização deste campo
+        public string? NotafvBase64 => Notafv != null ? Convert.ToBase64String(Notafv) : null;
+
+        public string UrlNotafv { get; set; } // Certifique-se de que esta propriedade esteja visível
     }
 }

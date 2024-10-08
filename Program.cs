@@ -17,6 +17,7 @@ builder.Services.AddDbContext<RdlsuperMarketContext>(options =>
 builder.Services.AddScoped<ClienteR>();
 builder.Services.AddScoped<ProdutosR>(); // Adicione esta linha
 builder.Services.AddScoped<EnderecoR>();
+builder.Services.AddScoped<VendumR>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

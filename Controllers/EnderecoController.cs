@@ -19,7 +19,7 @@ namespace RDLSuperMarket.Controllers
         // GET: api/Funcionario
         [HttpGet]
         public ActionResult<List<Endereco>> GetAll()
-        {
+        { 
             // Chama o repositório para obter todos os funcionários
             var endereco = _enderecoRepo.GetAll();
 

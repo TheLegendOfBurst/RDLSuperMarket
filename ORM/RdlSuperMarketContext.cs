@@ -21,7 +21,7 @@ public partial class RdlsuperMarketContext : DbContext
 
     public virtual DbSet<TbProduto> TbProdutos { get; set; }
 
-    public virtual DbSet<TbUsuario> TbUsuarios { get; set; }
+    public virtual DbSet<TbUsuario> TbUsuario { get; set; }
 
     public virtual DbSet<TbVendum> TbVenda { get; set; }
 
