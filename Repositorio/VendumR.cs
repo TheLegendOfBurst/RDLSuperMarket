@@ -32,7 +32,7 @@ namespace RDLSuperMarket.Repositorio
                 }
             }
 
-            // Cria uma nova entidade do tipo TbFuncionario a partir do objeto Funcionario recebido
+            // Cria uma nova entidade do tipo TbVendum a partir do objeto Funcionario recebido
             var tbVendum = new TbVendum()
             {
                 Valor = vendum.Valor,
@@ -42,36 +42,34 @@ namespace RDLSuperMarket.Repositorio
                 Fkproduto = vendum.Fkproduto,
             };
 
-            // Adiciona a entidade ao contexto
-            _context.TbVenda.Add(tbVendum);
-
-            // Salva as mudanças no banco de dados
+            // Adiciona a nova entidade ao contexto e salva as alterações
+            _context.TbVendum.Add(tbVendum);
             _context.SaveChanges();
         }
         public void Delete(int id)
         {
             // Busca a entidade existente no banco de dados pelo Id
-            var tbVedum = _context.TbVenda.FirstOrDefault(f => f.Id == id);
+            var tbVedum = _context.TbVendum.FirstOrDefault(f => f.Id == id);
 
             // Verifica se a entidade foi encontrada
             if (tbVedum != null)
             {
                 // Remove a entidade do contexto
-                _context.TbVenda.Remove(tbVedum);
+                _context.TbVendum.Remove(tbVedum);
 
                 // Salva as mudanças no banco de dados
                 _context.SaveChanges();
             }
             else
             {
-                throw new Exception("Venda não foi encontrada.");
+                throw new Exception("Vendum não foi encontrada.");
             }
         }
         public List<Vendum> GetAll()
         {
             List<Vendum> listVen = new List<Vendum>();
 
-            var listTb = _context.TbVenda.ToList();
+            var listTb = _context.TbVendum.ToList();
 
             foreach (var item in listTb)
             {
@@ -93,7 +91,7 @@ namespace RDLSuperMarket.Repositorio
         public Vendum GetById(int id)
         {
             // Busca o funcionário pelo ID no banco de dados
-            var item = _context.TbVenda.FirstOrDefault(f => f.Id == id);
+            var item = _context.TbVendum.FirstOrDefault(f => f.Id == id);
 
             // Verifica se o funcionário foi encontrado
             if (item == null)
@@ -116,7 +114,7 @@ namespace RDLSuperMarket.Repositorio
         public void Update(Vendum vendum, IFormFile notaFv)
         {
             // Busca a entidade existente no banco de dados pelo Id
-            var TbVendum = _context.TbVenda.FirstOrDefault(f => f.Id == vendum.Id);
+            var TbVendum = _context.TbVendum.FirstOrDefault(f => f.Id == vendum.Id);
 
             // Verifica se a entidade foi encontrada
             if (TbVendum != null)
@@ -138,7 +136,7 @@ namespace RDLSuperMarket.Repositorio
                 }
 
                 // Atualiza as informações no contexto
-                _context.TbVenda.Update(TbVendum);
+                _context.TbVendum.Update(TbVendum);
 
                 // Salva as mudanças no banco de dados
                 _context.SaveChanges();

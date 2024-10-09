@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RDLSuperMarket.Model;
 using RDLSuperMarket.Repositorio;
@@ -7,6 +8,7 @@ namespace RDLSuperMarket.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class EnderecoController : ControllerBase
     {
         private readonly EnderecoR _enderecoRepo; // O repositório que contém GetAll()

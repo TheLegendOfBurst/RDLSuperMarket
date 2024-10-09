@@ -10,8 +10,9 @@ namespace RDLSuperMarket.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
-     public class ClienteController : ControllerBase
+    [Authorize]
+
+    public class ClienteController : ControllerBase
     {
         private readonly ClienteR _clienteRepo; // O repositório que contém GetAll()
 

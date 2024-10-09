@@ -135,3 +135,11 @@ C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\r
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.pdb
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\RDLSuperMarket.genruntimeconfig.cache
 C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\obj\Debug\net8.0\ref\RDLSuperMarket.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Aluno Noite\Downloads\RDL_SuperMarket\RDLSuperMarket\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

@@ -6,9 +6,9 @@
 
         public decimal Valor { get; set; }
 
-        public int FkCliente { get; set; }
+        public int Fkcliente { get; set; }
 
-        public int FkProduto { get; set; }
+        public int Fkproduto { get; set; }
 
         public IFormFile Notafv { get; set; }
 
