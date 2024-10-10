@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RDLSuperMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b8842a82263116561265506d644b6112e9d9b0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06832b1b9b2ffd12a54f2dbacd6aebb7c9dc7ee2")]
 [assembly: System.Reflection.AssemblyProductAttribute("RDLSuperMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RDLSuperMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

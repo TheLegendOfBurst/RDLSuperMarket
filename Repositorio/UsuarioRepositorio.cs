@@ -4,11 +4,11 @@ using RDLSuperMarket.Repositorio;
 
 namespace RDLSuperMarket.Repositorio
 {
-    public class UsuarioR
+    public class UsuarioRepositorio
     {
         private readonly RdlsuperMarketContext _context;
 
-        public UsuarioR(RdlsuperMarketContext context)
+        public UsuarioRepositorio(RdlsuperMarketContext context)
         {
             _context = context;
         }
